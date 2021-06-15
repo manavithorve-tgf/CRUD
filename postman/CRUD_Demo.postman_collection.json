@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "abc438e2-8157-4d0a-a4ec-0414121c70db",
+		"name": "CRUD_Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Upload Video",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"videoID\":7,\n    \"title\":\"Video 7\",\n    \"videoURL\":\"http://demovideo/video7\",\n    \"duration\":24,\n    \"thumbnailURL\":\"http://demothumbnailurl/turl\",\n    \"uploadDate\":\"2020-05-04T18:30:00.000+00:00\",\n    \"size\":3,\n    \"olViewCount\":23,\n    \"ofViewCount\":20,\n    \"downloadCount\":19,\n    \"dirID\":9,\n    \"lyricsUrl\":\"http://demolyricsurl/lurl\",\n    \"free\":true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/videos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"videos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8085/videos/portal/all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/videos/portal/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"videos",
+						"portal",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8085/videos/video/download",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/videos/video/download",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"videos",
+						"video",
+						"download"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8085/videos/videoList/video",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n    {\n    \"videoID\":1,\n    \"title\":\"Video 1\",\n    \"videoURL\":\"http://demovideo/video1\",\n    \"duration\":24,\n    \"thumbnailURL\":\"http://demothumbnailurl/turl\",\n    \"uploadDate\":\"2020-05-04T18:30:00.000+00:00\",\n    \"size\":3,\n    \"olViewCount\":23,\n    \"ofViewCount\":20,\n    \"downloadCount\":19,\n    \"dirID\":9,\n    \"lyricsUrl\":\"http://demolyricsurl/lurl\",\n    \"free\":true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/videos/videoList/video",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"videos",
+						"videoList",
+						"video"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8085/videos/videoList/video",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/videos/videoList/video",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"videos",
+						"videoList",
+						"video"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
